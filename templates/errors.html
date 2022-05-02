@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <form action="{{ url_for('render_results') }}" method="post">
+    location : <input type="text" name="location"><br>
+    <input type="submit" value="Submit">
+ </form>
+</body>
+<div class="container">
+    <h1>Error..</h1>
+
+    {{error_statement}}
+    <br/><br/>
+</div>
+<body>
+<html>

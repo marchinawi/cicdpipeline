@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+ <h2> Weather forecast for next 7 days</h2>
+ <form action="{{ url_for('render_results') }}" method="post">
+    location : <input type="text" name="location"><br>
+    <input type="submit" value="Submit">
+ </form>
+</body>
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-lg-8 grid-margin stretch-card">
+                <!--weather card-->
+                <div class="card card-weather">
+                    <div class="card-body">
+                        <div class="weather-date-location">
+                            <h3> {{todays_date}} {{location}} {{country}} </h3>
+                            <h3>{{day_name0}}</h3>
+                        </div>
+                        <div class="weather-data d-flex">
+                            <div class="mr-auto">
+                                <h4 class="display-3">Temp in day is: {{day0}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night0}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity0}}% </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="d-flex weakly-weather">
+                            <div class="weakly-weather-item">
+                                <h4 class="display-3">{{day_name1}} </h4>
+                                <h4 class="display-3">Temp in day is: {{day1}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night1}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity1}}% </h4>
+                            </div>
+                            <div class="weakly-weather-item">
+                                <h4 class="display-3">{{day_name2}} </h4>
+                                <h4 class="display-3">Temp in day is: {{day2}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night2}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity2}}% </h4>
+                            </div>
+                            <div class="weakly-weather-item">
+                                <h4 class="display-3">{{day_name3}} </h4>
+                                <h4 class="display-3">Temp in day is: {{day3}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night3}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity3}}% </h4>
+                            </div>
+                            <div class="weakly-weather-item">
+                                <h4 class="display-3">{{day_name4}} </h4>
+                                <h4 class="display-3">Temp in day is: {{day4}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night4}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity4}}% </h4>
+                            </div>
+                            <div class="weakly-weather-item">
+                                <h4 class="display-3">{{day_name5}} </h4>
+                                <h4 class="display-3">Temp in day is: {{day5}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night5}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity5}}% </h4>
+                            </div>
+                            <div class="weakly-weather-item">
+                                <h4 class="display-3">{{day_name6}} </h4>
+                                <h4 class="display-3">Temp in day is: {{day6}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night6}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity6}}% </h4>
+                            </div>
+                            <div class="weakly-weather-item">
+                                <h4 class="display-3">{{day_name7}} </h4>
+                                <h4 class="display-3">Temp in day is: {{day7}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">Temp at night is: {{night7}} <span class="symbol">°</span>C</h4>
+                                <h4 class="display-3">humidity: {{humidity7}}% </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--weather card ends-->
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
